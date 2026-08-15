@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 필수 SEO 메타 태그 -->
+    <title>이용약관 | 비아몰 (VIAMALL)</title>
+    <meta name="description" content="비아몰(VIAMALL) 웹사이트 서비스 이용과 관련된 권리, 의무 및 책임사항을 규정한 이용약관입니다.">
+    <meta name="robots" content="noindex, nofollow"> <!-- 보통 약관 페이지는 검색 노출보다 사이트 신뢰도 증빙용으로 쓰이므로 noindex 처리하기도 하지만, E-E-A-T를 위해 색인 허용 -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- 중복 문서 방지 (Canonical URL) -->
+    <link rel="canonical" href="https://viamallyak.com/terms-of-service/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="비아몰 이용약관">
+    <meta property="og:description" content="비아몰(VIAMALL) 서비스 이용약관 안내입니다.">
+    <meta property="og:url" content="https://viamallyak.com/terms-of-service/">
+    <meta property="og:site_name" content="비아몰">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- 구조화된 데이터 (Breadcrumb) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "홈",
+              "item": "https://viamallyak.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "이용약관",
+              "item": "https://viamallyak.com/terms-of-service/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        
+        .terms-content h2 { font-size: 1.125rem; font-weight: 700; color: #1f2937; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .terms-content p { font-size: 0.875rem; color: #4b5563; line-height: 1.7; margin-bottom: 0.75rem; }
+        .terms-content ul { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 0.875rem; color: #4b5563; line-height: 1.7; }
+        .terms-content li { margin-bottom: 0.25rem; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-3xl font-black text-blue-900 tracking-tighter">비아몰 (VIAMALL)<span class="text-blue-500">.</span></a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none p-2" aria-label="메뉴 열기">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="/#shop" class="text-gray-700 hover:text-blue-600 font-bold transition">스토어 (상품보기)</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-blue-600 font-bold transition">건강 칼럼</a>
+                    <a href="/#order-section" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md flex items-center gap-2">
+                        <span>바로 주문하기</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl z-40">
+                <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                    <a href="/#shop" class="mobile-link block px-4 py-3 text-base font-bold text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition">스토어 (상품보기)</a>
+                    <a href="/blog/" class="mobile-link block px-4 py-3 text-base font-bold text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition">건강 칼럼</a>
+                    <a href="/#order-section" class="mobile-link mt-4 flex justify-center items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-md mx-2">
+                        <span>바로 주문하기</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 브레드크럼 -->
+            <nav class="text-sm text-gray-500 mb-6 flex items-center space-x-2" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">홈</a>
+                <span>&gt;</span>
+                <span class="text-gray-900 font-semibold" aria-current="page">이용약관</span>
+            </nav>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 md:p-12">
+                <h1 class="text-3xl font-black text-gray-900 mb-2">이용약관</h1>
+                <p class="text-gray-500 text-sm mb-8 pb-8 border-b border-gray-100">시행일: 2026년 8월 15일</p>
+
+                <div class="terms-content">
+                    <h2>제1조 (목적)</h2>
+                    <p>본 약관은 비아몰(이하 "회사"라 합니다)이 운영하는 온라인 쇼핑몰(이하 "비아몰"이라 합니다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 합니다)를 이용함에 있어 사이버 몰과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</p>
+
+                    <h2>제2조 (정의)</h2>
+                    <ul>
+                        <li>"비아몰"이란 회사가 재화 또는 용역(이하 "재화 등"이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.</li>
+                        <li>"이용자"란 "비아몰"에 접속하여 이 약관에 따라 "비아몰"이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.</li>
+                        <li>"회원"이라 함은 "비아몰"에 회원등록을 한 자로서, 계속적으로 "비아몰"이 제공하는 서비스를 이용할 수 있는 자를 말합니다.</li>
+                        <li>"비회원"이라 함은 회원에 가입하지 않고 "비아몰"이 제공하는 서비스를 이용하는 자를 말합니다.</li>
+                    </ul>
+
+                    <h2>제3조 (약관 등의 명시와 설명 및 개정)</h2>
+                    <ul>
+                        <li>"비아몰"은 이 약관의 내용과 상호 및 대표자 성명, 영업소 소재지 주소(소비자의 불만을 처리할 수 있는 곳의 주소를 포함), 전화번호, 모사전송번호, 전자우편주소, 사업자등록번호, 통신판매업 신고번호, 개인정보보호책임자 등을 이용자가 쉽게 알 수 있도록 비아몰의 초기 서비스화면(전면)에 게시합니다.</li>
+                        <li>"비아몰"은 전자상거래 등에서의 소비자보호에 관한 법률, 약관의 규제에 관한 법률, 전자문서 및 전자거래기본법, 전자금융거래법, 전자서명법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 방문판매 등에 관한 법률, 소비자기본법 등 관련 법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.</li>
+                        <li>"비아몰"이 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 몰의 초기화면에 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다.</li>
+                    </ul>
+
+                    <h2>제4조 (서비스의 제공 및 변경)</h2>
+                    <ul>
+                        <li>"비아몰"은 다음과 같은 업무를 수행합니다.<br>
+                            1. 재화 또는 용역에 대한 정보 제공 및 구매계약의 체결<br>
+                            2. 구매계약이 체결된 재화 또는 용역의 배송<br>
+                            3. 기타 "비아몰"이 정하는 업무
+                        </li>
+                        <li>"비아몰"은 재화 또는 용역의 품절 또는 기술적 사양의 변경 등의 경우에는 장차 체결되는 계약에 의해 제공할 재화 또는 용역의 내용을 변경할 수 있습니다.</li>
+                    </ul>
+
+                    <h2>제5조 (서비스의 중단)</h2>
+                    <p>"비아몰"은 컴퓨터 등 정보통신설비의 보수점검, 교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.</p>
+
+                    <h2>제6조 (구매신청)</h2>
+                    <p>"비아몰" 이용자는 "비아몰"상에서 다음 또는 이와 유사한 방법에 의하여 구매를 신청하며, "비아몰"은 이용자가 구매신청을 함에 있어서 다음의 각 내용을 알기 쉽게 제공하여야 합니다.</p>
+                    <ul>
+                        <li>재화 등의 검색 및 선택</li>
+                        <li>받는 사람의 성명, 주소, 전화번호, 전자우편주소(또는 이동전화번호) 등의 입력</li>
+                        <li>약관내용, 청약철회권이 제한되는 서비스, 배송료, 설치비 등의 비용부담과 관련한 내용에 대한 확인</li>
+                        <li>이 약관에 동의하고 위 3호의 사항을 확인하거나 거부하는 표시(예, 마우스 클릭)</li>
+                        <li>재화 등의 구매신청 및 이에 관한 확인 또는 "비아몰"의 확인에 대한 동의</li>
+                        <li>결제방법의 선택</li>
+                    </ul>
+
+                    <h2>제7조 (계약의 성립)</h2>
+                    <p>"비아몰"은 제6조와 같은 구매신청에 대하여 다음 각 호에 해당하면 승낙하지 않을 수 있습니다.</p>
+                    <ul>
+                        <li>신청 내용에 허위, 기재누락, 오기가 있는 경우</li>
+                        <li>미성년자가 담배, 주류 등 청소년보호법에서 금지하는 재화 및 용역을 구매하는 경우</li>
+                        <li>기타 구매신청에 승낙하는 것이 "비아몰" 기술상 현저히 지장이 있다고 판단하는 경우</li>
+                    </ul>
+
+                    <h2>제8조 (지급방법)</h2>
+                    <p>"비아몰"에서 구매한 재화 또는 용역에 대한 대금지급방법은 외부 결제(주문) 전용 사이트의 정책에 따르며, 무통장 입금, 신용카드 결제, 가상계좌 등 외부 주문 페이지에서 제공하는 방법을 통해 이루어집니다.</p>
+
+                    <h2>제9조 (개인정보보호)</h2>
+                    <p>"비아몰"은 이용자의 개인정보 수집시 서비스제공을 위하여 필요한 범위에서 최소한의 개인정보를 수집합니다. 자세한 사항은 별도로 고지하는 [개인정보처리방침]에 따릅니다.</p>
+
+                    <h2>제10조 (면책사항)</h2>
+                    <p>"비아몰"에서 제공하는 건강 관련 정보(블로그, 칼럼 등)는 전문적인 의학적 진단이나 치료를 대신할 수 없습니다. 이용자는 본인의 건강 상태에 따라 전문의와 상담을 거쳐 제품을 구매 및 섭취해야 하며, 회사는 이용자가 제공된 정보를 임의로 판단하여 발생한 결과에 대해 법적 책임을 지지 않습니다.</p>
+
+                    <h2>제11조 (재판권 및 준거법)</h2>
+                    <p>"비아몰"과 이용자 간에 발생한 전자상거래 분쟁에 관한 소송은 제소 당시의 이용자의 주소에 의하고, 주소가 없는 경우에는 거소를 관할하는 지방법원의 전속관할로 합니다. 아울러 본 약관은 대한민국 법을 적용합니다.</p>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="/" class="inline-block bg-gray-900 hover:bg-black text-white font-bold py-3 px-8 rounded-lg transition shadow-md">홈으로 돌아가기</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="customer" class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div id="order-section" class="scroll-mt-24">
+                <h3 class="text-white text-xl font-bold mb-4">제품 문의 및 빠른 주문</h3>
+                <p class="mb-6 text-sm">전화 상담 대기 없이, 24시간 안전하게 온라인 주문 사이트를 이용하실 수 있습니다. 결제 및 배송 관련 모든 처리는 아래 전용 사이트에서 신속하게 진행됩니다.</p>
+                
+                <div class="mt-4 mb-8">
+                    <a href="https://ssw33.xyz" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:-translate-y-1 text-lg">
+                        🛒 전용 주문사이트로 바로가기 &rarr;
+                    </a>
+                </div>
+                
+                <div class="text-sm">
+                    <p class="text-gray-300 font-bold mb-1">고객센터 운영시간</p>
+                    <p>평일 10:00 - 17:00 (점심시간 12:00 - 13:00)</p>
+                    <p>주말 및 공휴일 휴무 (온라인 주문은 24시간 가능)</p>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-white text-xl font-bold">비아몰 (VIAMALL)</h3>
+                    <div class="space-x-4 text-sm">
+                        <a href="/terms-of-service" class="hover:text-white text-gray-200 font-bold transition">이용약관</a>
+                        <a href="/privacy-policy" class="hover:text-white transition">개인정보처리방침</a>
+                    </div>
+                </div>
+                
+                <address class="not-italic space-y-2 text-sm bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <p><strong class="text-gray-300">상호명 :</strong> 비아몰 | <strong class="text-gray-300">대표 :</strong> [실제 대표자 성함]</p>
+                    <p><strong class="text-gray-300">사업자등록번호 :</strong> [실제 사업자등록번호]</p>
+                    <p><strong class="text-gray-300">통신판매업신고 :</strong> 제2026-서울강남-0000호</p>
+                    <p><strong class="text-gray-300">주소 :</strong> 서울특별시 강남구 테헤란로 00, 00층 (비아몰)</p>
+                    <p><strong class="text-gray-300">이메일 :</strong> support@viamallyak.com</p>
+                    <p><strong class="text-gray-300">개인정보보호책임자 :</strong> [실제 대표자 성함]</p>
+                    <p class="mt-4 text-xs text-gray-500 pt-4 border-t border-gray-700">본 사이트의 블로그 콘텐츠는 건강 정보 제공을 목적으로 하며, 의사의 진료를 대신할 수 없습니다. 모든 상품은 식약처 인증 성분으로 구성되며 관련 법규를 준수합니다.</p>
+                </address>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center">
+            &copy; 2026 Viamall. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if(mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                mobileLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
