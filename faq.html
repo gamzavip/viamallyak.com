@@ -1,1 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>자주 묻는 질문 (FAQ) | 비아몰 (VIAMALL)</title>
+    <meta name="description" content="비아몰 배송, 결제, 제품 안전성에 대한 자주 묻는 질문(FAQ)입니다. 확실한 3중 비밀 배송과 총알 당일 출고 시스템에 대해 확인해 보세요.">
+    <meta name="keywords" content="비아몰, 비아몰 고객센터, 비아몰 배송, 비밀배송, 당일출고, 자주묻는질문, FAQ">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 중복 문서 방지 (Canonical URL) -->
+    <link rel="canonical" href="https://viamallyak.com/faq/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="자주 묻는 질문 (FAQ) | 비아몰">
+    <meta property="og:description" content="고객님들이 가장 궁금해하시는 배송 및 결제, 비밀 포장에 대한 답변입니다.">
+    <meta property="og:url" content="https://viamallyak.com/faq/">
+    <meta property="og:site_name" content="비아몰">
+    <meta property="og:image" content="https://viamallyak.com/img/Gemini_Generated_Image_ooqzugooqzugooqz.png">
+    <meta property="og:locale" content="ko_KR">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "홈",
+              "item": "https://viamallyak.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "자주 묻는 질문",
+              "item": "https://viamallyak.com/faq/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://viamallyak.com/faq/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "배송은 보통 얼마나 걸리나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "비아몰은 '총알 당일 출고'를 원칙으로 합니다. 평일 오후 4시 이전까지 결제가 완료된 주문 건에 한해 당일 발송되며, 택배사 사정에 이변이 없는 한 대부분 다음 날(익일) 받아보실 수 있습니다. (주말 및 공휴일 제외)"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "가족이 모르게 받고 싶은데 비밀 배송이 보장되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 완벽하게 보장됩니다. 내용물을 전혀 유추할 수 없도록 3중 불투명 안전 포장으로 발송됩니다. 또한 택배 송장에는 '사무용품' 또는 '생활용품'으로 기재되어 가족이나 택배 기사님도 절대 알 수 없습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "주문 및 결제는 어떻게 진행되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "고객님의 안전하고 신속한 결제를 위해 제휴된 외부 전용 주문 사이트를 운영하고 있습니다. 사이트 곳곳에 있는 '바로 주문하기' 버튼을 누르시면 전용 주문 사이트(https://ssw33.xyz)로 이동하며, 그곳에서 카드 결제 및 무통장 입금 등 원하시는 방법으로 결제하실 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "제품은 부작용 없이 안전한가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "비아몰에서 취급하는 제품들은 엄격한 품질 테스트를 거친 안전한 성분(마카, 아르기닌, 쏘팔메토 등)으로 구성되어 있습니다. 일일 권장 섭취량을 지켜 드신다면 부작용 걱정 없이 안전하게 활력을 증진시킬 수 있습니다. 단, 특이 체질이나 기저질환이 있으신 분은 전문의와 상담 후 섭취하시길 권장합니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        
+        /* 아코디언 애니메이션을 위한 유틸리티 */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px; /* 텍스트 길이에 따라 충분히 여유를 둠 */
+            padding-top: 1rem;
+            padding-bottom: 1.5rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-3xl font-black text-blue-900 tracking-tighter">비아몰 (VIAMALL)<span class="text-blue-500">.</span></a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none p-2" aria-label="메뉴 열기">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="/#shop" class="text-gray-700 hover:text-blue-600 font-bold transition">스토어 (상품보기)</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-blue-600 font-bold transition">건강 칼럼</a>
+                    <a href="#order-section" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md flex items-center gap-2">
+                        <span>바로 주문하기</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl z-40">
+                <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                    <a href="/#shop" class="mobile-link block px-4 py-3 text-base font-bold text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition">스토어 (상품보기)</a>
+                    <a href="/blog/" class="mobile-link block px-4 py-3 text-base font-bold text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition">건강 칼럼</a>
+                    <a href="#order-section" class="mobile-link mt-4 flex justify-center items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-md mx-2">
+                        <span>바로 주문하기</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 브레드크럼 -->
+            <nav class="text-sm text-gray-500 mb-6 flex items-center space-x-2" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">홈</a>
+                <span>&gt;</span>
+                <span class="text-gray-900 font-semibold" aria-current="page">자주 묻는 질문</span>
+            </nav>
+
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">자주 묻는 질문 (FAQ)</h1>
+                <p class="text-gray-500">고객님들께서 가장 많이 문의하시는 내용을 모았습니다.<br>원하시는 답변을 찾지 못하셨다면 언제든 하단 주문 사이트를 통해 문의해 주세요.</p>
+            </div>
+
+            <!-- FAQ 아코디언 리스트 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden divide-y divide-gray-100">
+                
+                <!-- FAQ 아이템 1 -->
+                <div class="faq-item group">
+                    <button class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg text-gray-900 pr-4 flex items-start">
+                            <span class="text-blue-600 mr-3">Q.</span> 
+                            배송은 보통 얼마나 걸리나요?
+                        </span>
+                        <svg class="w-5 h-5 text-gray-400 faq-icon transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 px-4 bg-gray-50 text-gray-600 border-t border-gray-100">
+                        <div class="flex items-start">
+                            <span class="text-blue-900 font-bold mr-3">A.</span>
+                            <p class="leading-relaxed">
+                                비아몰은 <strong>'총알 당일 출고'</strong>를 원칙으로 합니다. 평일 오후 4시 이전까지 결제가 완료된 주문 건에 한해 당일 발송되며, 택배사 사정에 이변이 없는 한 대부분 다음 날(익일) 받아보실 수 있습니다. (주말 및 공휴일은 택배사 휴무로 인해 발송되지 않습니다.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 아이템 2 -->
+                <div class="faq-item group">
+                    <button class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg text-gray-900 pr-4 flex items-start">
+                            <span class="text-blue-600 mr-3">Q.</span> 
+                            가족이 모르게 받고 싶은데 비밀 배송이 보장되나요?
+                        </span>
+                        <svg class="w-5 h-5 text-gray-400 faq-icon transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50 text-gray-600 border-t border-gray-100">
+                        <div class="flex items-start">
+                            <span class="text-blue-900 font-bold mr-3">A.</span>
+                            <p class="leading-relaxed">
+                                네, <strong>완벽하게 보장</strong>됩니다. 고객님의 프라이버시를 가장 중요하게 생각하여 내용물을 전혀 유추할 수 없도록 3중 불투명 안전 포장으로 발송됩니다. 또한 택배 송장 품목란에는 '사무용품' 또는 '생활용품'으로 기재되어 가족이나 택배 기사님도 절대 알 수 없습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 아이템 3 -->
+                <div class="faq-item group">
+                    <button class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg text-gray-900 pr-4 flex items-start">
+                            <span class="text-blue-600 mr-3">Q.</span> 
+                            주문 및 결제는 어떻게 진행되나요?
+                        </span>
+                        <svg class="w-5 h-5 text-gray-400 faq-icon transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50 text-gray-600 border-t border-gray-100">
+                        <div class="flex items-start">
+                            <span class="text-blue-900 font-bold mr-3">A.</span>
+                            <p class="leading-relaxed">
+                                고객님의 안전하고 신속한 정보 보안 및 결제를 위해 제휴된 외부 <strong>전용 주문 사이트</strong>를 운영하고 있습니다. 홈페이지 곳곳에 있는 '바로 주문하기' 버튼을 누르시면 전용 주문 사이트(<a href="https://ssw33.xyz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://ssw33.xyz</a>)로 즉시 이동하며, 그곳에서 안전하게 결제를 진행하실 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 아이템 4 -->
+                <div class="faq-item group">
+                    <button class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg text-gray-900 pr-4 flex items-start">
+                            <span class="text-blue-600 mr-3">Q.</span> 
+                            제품은 부작용 없이 안전한가요?
+                        </span>
+                        <svg class="w-5 h-5 text-gray-400 faq-icon transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50 text-gray-600 border-t border-gray-100">
+                        <div class="flex items-start">
+                            <span class="text-blue-900 font-bold mr-3">A.</span>
+                            <p class="leading-relaxed">
+                                비아몰에서 취급하는 제품들은 엄격한 품질 테스트를 거친 <strong>식약처 인증 안전 성분</strong>(마카, 아르기닌, 쏘팔메토 등)으로 구성되어 있습니다. 일일 권장 섭취량을 지켜 드신다면 부작용 걱정 없이 안전하게 활력을 증진시킬 수 있습니다. 단, 특이 체질이나 중증 기저질환이 있으신 분은 전문의와 상담 후 섭취하시길 권장합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 아이템 5 -->
+                <div class="faq-item group">
+                    <button class="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg text-gray-900 pr-4 flex items-start">
+                            <span class="text-blue-600 mr-3">Q.</span> 
+                            교환이나 환불 규정은 어떻게 되나요?
+                        </span>
+                        <svg class="w-5 h-5 text-gray-400 faq-icon transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50 text-gray-600 border-t border-gray-100">
+                        <div class="flex items-start">
+                            <span class="text-blue-900 font-bold mr-3">A.</span>
+                            <p class="leading-relaxed">
+                                상품 수령 후 7일 이내에, 포장을 뜯지 않고 훼손되지 않은 상태의 제품에 한하여 교환 및 환불이 가능합니다. 단순 변심에 의한 반품의 경우 왕복 배송비는 고객님 부담이며, 제품 불량이나 오배송의 경우 비아몰에서 전액 부담합니다. 자세한 문의는 전용 주문 사이트 고객센터를 이용해 주시기 바랍니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 하단 추가 문의 유도 -->
+            <div class="mt-12 text-center bg-blue-50 p-8 rounded-2xl border border-blue-100">
+                <p class="text-blue-900 font-bold mb-2">원하시는 답변을 찾지 못하셨나요?</p>
+                <p class="text-blue-700 text-sm mb-6">주문 사이트 고객센터를 통해 1:1로 빠르게 해결해 드립니다.</p>
+                <a href="https://ssw33.xyz" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition shadow-md hover:bg-blue-700">고객센터 바로가기 &rarr;</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="customer" class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div id="order-section" class="scroll-mt-24">
+                <h3 class="text-white text-xl font-bold mb-4">제품 문의 및 빠른 주문</h3>
+                <p class="mb-6 text-sm">전화 상담 대기 없이, 24시간 안전하게 온라인 주문 사이트를 이용하실 수 있습니다. 결제 및 배송 관련 모든 처리는 아래 전용 사이트에서 신속하게 진행됩니다.</p>
+                
+                <div class="mt-4 mb-8">
+                    <a href="https://ssw33.xyz" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:-translate-y-1 text-lg">
+                        🛒 전용 주문사이트로 바로가기 &rarr;
+                    </a>
+                </div>
+                
+                <div class="text-sm">
+                    <p class="text-gray-300 font-bold mb-1">고객센터 운영시간</p>
+                    <p>평일 10:00 - 17:00 (점심시간 12:00 - 13:00)</p>
+                    <p>주말 및 공휴일 휴무 (온라인 주문은 24시간 가능)</p>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-white text-xl font-bold">비아몰 (VIAMALL)</h3>
+                    <div class="space-x-4 text-sm flex items-center">
+                        <a href="/faq" class="hover:text-white transition">FAQ</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="/terms-of-service" class="hover:text-white transition">이용약관</a>
+                        <span class="text-gray-600">|</span>
+                        <a href="/privacy-policy" class="hover:text-white transition">개인정보처리방침</a>
+                    </div>
+                </div>
+                
+                <address class="not-italic space-y-2 text-sm bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <p><strong class="text-gray-300">상호명 :</strong> 비아몰 | <strong class="text-gray-300">대표 :</strong> [실제 대표자 성함]</p>
+                    <p><strong class="text-gray-300">사업자등록번호 :</strong> [실제 사업자등록번호]</p>
+                    <p><strong class="text-gray-300">통신판매업신고 :</strong> 제2026-서울강남-0000호</p>
+                    <p><strong class="text-gray-300">주소 :</strong> 서울특별시 강남구 테헤란로 00, 00층 (비아몰)</p>
+                    <p><strong class="text-gray-300">이메일 :</strong> support@viamallyak.com</p>
+                    <p><strong class="text-gray-300">개인정보보호책임자 :</strong> [실제 대표자 성함]</p>
+                    <p class="mt-4 text-xs text-gray-500 pt-4 border-t border-gray-700">본 사이트의 모든 상품은 식약처 인증을 받은 안전한 성분으로 구성되어 있습니다. 의학적 효능에 관한 과장 광고를 하지 않으며, 관련 법규를 준수합니다.</p>
+                </address>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center">
+            &copy; 2026 Viamall. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모바일 메뉴 토글
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if(mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                mobileLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // FAQ 아코디언 토글 로직
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            // 첫 번째 질문은 기본으로 열어두기 (선택 사항)
+            if(faqItems.length > 0) {
+                faqItems[0].classList.add('active');
+            }
+
+            faqItems.forEach(item => {
+                const button = item.querySelector('button');
+                button.addEventListener('click', () => {
+                    // 열려있는 다른 아코디언 닫기
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // 현재 클릭한 아코디언 토글
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
