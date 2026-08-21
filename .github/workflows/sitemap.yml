@@ -1,0 +1,31 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main # 만약 기본 브랜치 이름이 master라면 master로 변경하세요.
+    paths:
+      - '**/*.html' # HTML 파일이 수정되거나 추가될 때만 작동합니다.
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. 내 웹사이트 코드 가져오기
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 2. 사이트맵 자동 생성기 실행
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://viamallyak.com/
+          drop-html-extension: true
+          
+      - name: 3. 만들어진 사이트맵을 서버에 자동 저장 (Commit & Push)
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m "자동: 사이트맵 업데이트 완료" || exit 0
+          git push
