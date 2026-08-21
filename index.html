@@ -411,18 +411,7 @@
     <!-- 1. 푸터가 자동으로 들어올 빈 자리 -->
     <div id="footer-placeholder"></div>
 
-    <!-- 2. 공통 푸터 불러오기 자바스크립트 -->
-    <script>
-        fetch('/footer.html')
-            .then(response => {
-                if (!response.ok) throw new Error('푸터 파일을 찾을 수 없습니다.');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('푸터 로딩 에러:', error));
-    </script>
+  
 
     <!-- (이 아래로는 원래 있던 주문 팝업(모달), 커스텀 알림창, 자바스크립트 코드가 그대로 이어지면 됩니다) -->
 
