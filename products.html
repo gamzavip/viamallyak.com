@@ -32,7 +32,7 @@
     <meta name="twitter:description" content="남성 정력제부터 조루 완화제까지. 100% 안심 비밀 배송으로 만나보세요.">
     <meta name="twitter:image" content="https://viamallyak.com/img/Gemini_Generated_Image_ooqzugooqzugooqz.png">
 
-    <!-- 통합 구조화된 데이터 생략 없이 기존 코드 유지 -->
+    <!-- 통합 구조화된 데이터 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -517,6 +517,8 @@
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="text-white text-xl font-bold">비아몰 (VIAMALL)</h3>
                     <div class="space-x-4 text-sm flex items-center">
+                        <a href="/faq" class="hover:text-white transition">FAQ</a>
+                        <span class="text-gray-600">|</span>
                         <a href="/terms-of-service" class="hover:text-white transition">이용약관</a>
                         <span class="text-gray-600">|</span>
                         <a href="/privacy-policy" class="hover:text-white transition">개인정보처리방침</a>
@@ -614,14 +616,17 @@
             document.body.style.overflow = "auto";
         }
 
-        // 4. 텔레그램 연동 Submit 로직 (여러 상품 동적 인식 적용)
+        // 4. 텔레그램 연동 Submit 로직 (전화번호 강력 검증 적용)
         async function submitOrder(event) {
             event.preventDefault();
             
             const phoneInput = document.getElementById("userPhone");
-            const phoneVal = phoneInput.value.replace(/[^0-9]/g, '');
-            if (!phoneVal.startsWith("010") || phoneVal.length < 10) {
-                alert("휴대폰 번호를 정확히 입력해주세요. (010으로 시작해야 합니다.)");
+            
+            // 정규식 검증: 010으로 시작하고, 중간 4자리, 끝 4자리가 정확히 일치해야 함 (총 13자)
+            const phonePattern = /^010-\d{4}-\d{4}$/;
+            
+            if (!phonePattern.test(phoneInput.value)) {
+                alert("휴대폰 번호를 정확히 입력해주세요. (예: 010-1234-5678)");
                 phoneInput.focus();
                 return;
             }
@@ -633,7 +638,7 @@
             const productInfo = document.getElementById("selectedProductName").value;
 
             // 텔레그램으로 보낼 메시지 포맷
-            const messageText = `[전체상품주문] ${productInfo} | ${userName} | ${userPhone} | ${userAddress} | ${userMemo} | 비아몰`;
+            const messageText = `${productInfo} | ${userName} | ${userPhone} | ${userAddress} | ${userMemo} | 비아몰`;
 
             const botToken = "8818199189:AAGup-iHBjOrMZ1ajQAG2iR7DoOtqdl8GvY";
             const chatId = "7774402153";
