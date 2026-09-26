@@ -616,33 +616,42 @@
             document.body.style.overflow = "auto";
         }
 
-        // 4. 텔레그램 연동 Submit 로직 (전화번호 강력 검증 적용)
+        // 4. 텔레그램 연동 Submit (직접 구축한 API 서버 호출 방식)
         async function submitOrder(event) {
             event.preventDefault();
             
             const phoneInput = document.getElementById("userPhone");
+            let phoneVal = phoneInput.value.trim();
             
-            // 정규식 검증: 010으로 시작하고, 중간 4자리, 끝 4자리가 정확히 일치해야 함 (총 13자)
-            const phonePattern = /^010-\d{4}-\d{4}$/;
+            // 사용자가 입력한 값에서 숫자만 추출
+            const rawNumbers = phoneVal.replace(/[^0-9]/g, '');
+
+            // 숫자만 11자리이고 010으로 시작하면 자동으로 하이픈(-) 추가
+            if (rawNumbers.length === 11 && rawNumbers.startsWith("010")) {
+                phoneVal = rawNumbers.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+                phoneInput.value = phoneVal; // 화면의 입력창도 하이픈이 들어간 형태로 즉시 변경해 줌
+            }
             
-            if (!phonePattern.test(phoneInput.value)) {
+            // 010-4자리-4자리 형태만 무조건 허용하는 정규식
+            const phoneRegex = /^010-\d{4}-\d{4}$/;
+            
+            if (!phoneRegex.test(phoneVal)) {
                 alert("휴대폰 번호를 정확히 입력해주세요. (예: 010-1234-5678)");
                 phoneInput.focus();
                 return;
             }
 
             const userName = document.getElementById("userName").value;
-            const userPhone = phoneInput.value;
+            const userPhone = phoneVal; // 변환 및 검증이 끝난 완벽한 번호 사용
             const userAddress = document.getElementById("userAddress").value;
             const userMemo = document.getElementById("userMemo").value || "메모 없음";
             const productInfo = document.getElementById("selectedProductName").value;
 
-            // 텔레그램으로 보낼 메시지 포맷
-            const messageText = `${productInfo} | ${userName} | ${userPhone} | ${userAddress} | ${userMemo} | 비아몰`;
+            // 이 스크립트가 적용될 현재 웹사이트의 이름으로 변경
+            const siteName = "비아몰"; 
 
-            const botToken = "8818199189:AAGup-iHBjOrMZ1ajQAG2iR7DoOtqdl8GvY";
-            const chatId = "7774402153";
-            const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+            // 직접 구축한 API 주소
+            const myApiUrl = "https://telegram-order-api.2402440676.workers.dev/";
 
             const submitBtn = event.target.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
@@ -650,20 +659,27 @@
             submitBtn.disabled = true;
 
             try {
-                const response = await fetch(telegramUrl, {
+                const response = await fetch(myApiUrl, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams({ chat_id: chatId, text: messageText })
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        productInfo: productInfo,
+                        userName: userName,
+                        userPhone: userPhone,
+                        userAddress: userAddress,
+                        userMemo: userMemo,
+                        siteName: siteName
+                    })
                 });
 
                 if (response.ok) {
-                    closeModal(); // 주문 폼 닫기
-                    document.getElementById('custom-alert').style.display = "flex"; // 성공 알림 띄우기
+                    if (typeof closeModal === 'function') closeModal(); // 주문 폼 닫기
+                    const customAlert = document.getElementById('custom-alert');
+                    if (customAlert) customAlert.style.display = "flex"; // 성공 알림 띄우기
                     document.body.style.overflow = "hidden";
                     event.target.reset();
                 } else {
-                    const errData = await response.json();
-                    alert(`전송 실패 (오류 내용: ${errData.description})`);
+                    alert("전송 실패 (서버 오류가 발생했습니다.)");
                 }
             } catch (error) {
                 console.error("통신 오류 상세:", error);
